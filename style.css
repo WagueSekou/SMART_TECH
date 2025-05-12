@@ -77,7 +77,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #fffff;
+    background: #ffffff;
     color: #0d47a1;
 }
 
@@ -255,3 +255,43 @@ iframe {
         height: 250px;
     }
 }
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #0d47a1;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+

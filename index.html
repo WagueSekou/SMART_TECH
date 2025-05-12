@@ -18,7 +18,8 @@
 
   <nav>
     <img src="assets/logo.png" alt="Logo Smart-Tech" class="logo">
-    <div class="nav-links">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button> <!-- Hamburger -->
+    <div class="nav-links" id="nav-links">
       <a href="#apropos">À propos</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
@@ -87,5 +88,14 @@
   <footer>
     <p>&copy; 2025 Smart-Tech. Tous droits réservés.</p>
   </footer>
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
 </body>
 </html>
